@@ -3,4 +3,12 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
+    <!--默认顶部栏选择主色调-->
+    <color name="statusBarColor">#EB6100</color>
+    <!--toolbar主题色-->
+    <color name="ToolBarColor">#E2A500</color>
+    <!--toolbar主题色-->
+    <color name="bottom_inactive">#ADADAD</color>
+
+
 </resources>

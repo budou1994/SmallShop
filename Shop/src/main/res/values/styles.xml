@@ -1,11 +1,16 @@
 <resources>
 
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+    <style name="AppTheme" parent="Theme.AppCompat.Light">
         <!-- Customize your theme here. -->
-        <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
-        <item name="colorAccent">@color/colorAccent</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <!--toolbar背景色-->
+        <item name="colorPrimary">@color/ToolBarColor</item>
+        <!--状态栏背景色-->
+        <item name="colorPrimaryDark">@color/statusBarColor</item>
+        <!--对应编辑颜色-->
+        <item name="colorAccent">@android:color/holo_blue_dark</item>
     </style>
 
 </resources>
