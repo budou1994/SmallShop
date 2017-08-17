@@ -1,8 +1,8 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     tools:context="com.budou.smallshop.fragment.HomeFragment">
 
@@ -10,7 +10,24 @@
 
     <com.youth.banner.Banner
         android:id="@+id/banner_homeFragment"
-        app:indicator_drawable_selected="@bool/bb_bottom_bar_is_tablet_mode"
         android:layout_width="match_parent"
-        android:layout_height="150dp" />
+        android:layout_height="120dp"
+        app:indicator_drawable_selected="@drawable/banner_select_home"
+        app:indicator_drawable_unselected="@drawable/banner_unselect_home"
+        app:indicator_height="5dp"
+        app:indicator_width="5dp" />
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/vp_homeFragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:id="@+id/linear_point_group"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal" />
+
+
 </LinearLayout>

@@ -9,6 +9,7 @@
     <color name="ToolBarColor">#E2A500</color>
     <!--toolbar主题色-->
     <color name="bottom_inactive">#ADADAD</color>
+    <color name="white">#ffffff</color>
 
 
 </resources>
