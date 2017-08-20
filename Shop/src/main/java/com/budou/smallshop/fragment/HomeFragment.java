@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
+import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -18,6 +19,7 @@ import android.widget.Toast;
 
 import com.budou.smallshop.R;
 import com.budou.smallshop.adapter.GridAdapter;
+import com.budou.utils.GlideApp;
 import com.bumptech.glide.Glide;
 import com.youth.banner.Banner;
 import com.youth.banner.BannerConfig;
@@ -53,6 +55,8 @@ public class HomeFragment extends Fragment {
     ViewPager vpHomeFragment;
     @BindView(R.id.linear_point_group)
     LinearLayout linearPointGroup;//圆点指示器
+    @BindView(R.id.recycler_home)
+    RecyclerView recyclerHome;
 
     public HomeFragment() {
     }
@@ -123,7 +127,7 @@ public class HomeFragment extends Fragment {
                                         int position, long id) {
                     Object obj = gridView.getItemAtPosition(position);
                     if (obj != null && obj instanceof Integer) {
-                        Toast.makeText(getActivity(), (position+ finalI *pagersize)+"", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getActivity(), (position + finalI * pagersize) + "", Toast.LENGTH_SHORT).show();
                     }
                 }
             });
@@ -181,8 +185,6 @@ public class HomeFragment extends Fragment {
             }
         });
     }
-
-
 
 
     @Override
