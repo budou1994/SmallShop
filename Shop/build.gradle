@@ -20,7 +20,7 @@ android {
 }
 
 dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile fileTree(include: ['*.jar'], dir: 'libs')
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
@@ -36,5 +36,12 @@ dependencies {
     compile 'com.youth.banner:banner:1.4.9'
     compile 'com.github.bumptech.glide:glide:4.0.0'
     annotationProcessor 'com.github.bumptech.glide:compiler:4.0.0'
-
+    //    万能adapter 测试使用 感觉还是蛮不错的
+    compile 'com.lin:poweradapter:1.3@aar'
+    //网络访问 目前还是使用弘扬的okhttputils  大神已经停止维护
+    compile 'com.zhy:okhttputils:2.6.2'
+    //数据解析 采用gson解析
+    compile 'com.google.code.gson:gson:2.8.1'
+//    compile project(':libs_PullToRefresh')
+    compile 'com.github.lygttpod:SuperTextView:2.1.3'
 }

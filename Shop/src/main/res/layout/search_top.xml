@@ -2,6 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="45dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@color/ToolBarColor"
     android:gravity="center_vertical"
     android:orientation="horizontal"
@@ -12,7 +13,7 @@
         android:layout_height="wrap_content"
         android:src="@drawable/homescan_normal" />
 
-    <RelativeLayout
+    <com.allen.library.SuperTextView
         android:layout_width="0dp"
         android:layout_height="match_parent"
         android:layout_marginBottom="1dp"
@@ -20,9 +21,12 @@
         android:layout_marginRight="10dp"
         android:layout_marginTop="1dp"
         android:layout_weight="1"
-        android:background="@color/cardview_shadow_start_color">
+        app:sShapeCornersRadius="180dp"
+        app:sLeftIconRes="@drawable/search"
+        app:sBackgroundDrawableRes="@drawable/search_back_ground_home"
+>
 
-    </RelativeLayout>
+    </com.allen.library.SuperTextView>
 
     <ImageView
         android:layout_width="wrap_content"

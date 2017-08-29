@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.budou.smallshop.MainActivity">
+    tools:context="com.budou.smallshop.ui.MainActivity">
 
     <FrameLayout
         android:id="@+id/frame_main"
@@ -21,7 +21,7 @@
     <com.roughike.bottombar.BottomBar
         android:id="@+id/bottom_bar"
         android:layout_width="match_parent"
-        android:layout_height="60dp"
+        android:layout_height="65dp"
         app:bb_activeTabColor="@color/ToolBarColor"
         app:bb_inActiveTabColor="@color/bottom_inactive"
         app:bb_tabXmlResource="@xml/bottom_bar" />

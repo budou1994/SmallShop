@@ -6,7 +6,9 @@ import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
+import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.StaggeredGridLayoutManager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -19,7 +21,7 @@ import android.widget.Toast;
 
 import com.budou.smallshop.R;
 import com.budou.smallshop.adapter.GridAdapter;
-import com.budou.utils.GlideApp;
+import com.budou.smallshop.adapter.homecontainer.RecyclerAdapter_home;
 import com.bumptech.glide.Glide;
 import com.youth.banner.Banner;
 import com.youth.banner.BannerConfig;
@@ -55,7 +57,7 @@ public class HomeFragment extends Fragment {
     ViewPager vpHomeFragment;
     @BindView(R.id.linear_point_group)
     LinearLayout linearPointGroup;//圆点指示器
-    @BindView(R.id.recycler_home)
+    @BindView(R.id.recycler_container_home)
     RecyclerView recyclerHome;
 
     public HomeFragment() {
@@ -70,6 +72,8 @@ public class HomeFragment extends Fragment {
         unbinder = ButterKnife.bind(this, view);
         initBanner();
         initGrid();
+
+        initRecycler();
         return view;
     }
 
@@ -184,6 +188,18 @@ public class HomeFragment extends Fragment {
 
             }
         });
+    }
+
+    /**
+     * 对首页下RecycleView进行一个初始化
+     */
+    private void initRecycler() {
+        RecyclerAdapter_home adapter_home = new RecyclerAdapter_home(getActivity());
+        StaggeredGridLayoutManager staggeredGridLayoutManager =
+                new StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.HORIZONTAL);
+        GridLayoutManager manager=new GridLayoutManager(getActivity(),2);
+        recyclerHome.setLayoutManager(staggeredGridLayoutManager);
+        recyclerHome.setAdapter(adapter_home);
     }
 
 

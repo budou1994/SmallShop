@@ -10,6 +10,7 @@
     <!--toolbar主题色-->
     <color name="bottom_inactive">#ADADAD</color>
     <color name="white">#ffffff</color>
-
+    <!--APP主题内容灰白色-->
+    <color name="background_all_gray">#F5F5F5</color>
 
 </resources>
